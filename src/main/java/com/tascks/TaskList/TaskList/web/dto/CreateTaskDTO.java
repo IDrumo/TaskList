@@ -11,8 +11,8 @@ import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
 
 @JsonDeserialize(builder = CreateTaskDTO.Builder.class)
 public class CreateTaskDTO {
-    private Integer id;
-    private final String title;
+    //    private Integer id;
+    private String title;
     private String description;
 
     public static Builder builder() {
@@ -21,11 +21,9 @@ public class CreateTaskDTO {
 
     private CreateTaskDTO(Builder builder) {
         this.title = builder.title;
+        this.description = builder.description;
     }
 
-    public Integer getId() {
-        return id;
-    }
 
     public String getTitle() {
         return title;
@@ -35,11 +33,18 @@ public class CreateTaskDTO {
         return description;
     }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     @Override
     public String toString() {
         return "CreateTaskDTO{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
+                "title='" + title + '\'' +
                 ", description='" + description + '\'' +
                 '}';
     }

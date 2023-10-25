@@ -1,0 +1,8 @@
+### Запрос на создание пользователя
+POST http://localhost:8080/tasks
+Content-type: application/json
+
+{
+  "title": "number 1",
+  "description": "description 1"
+}
