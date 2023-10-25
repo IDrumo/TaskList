@@ -8,6 +8,23 @@ Content-type: application/json
 }
 
 ### Запрос на создание пользователя
+POST http://localhost:8080/tasks
+Content-type: application/json
+
+{
+  "description": "Достаточно длинный описывающий блок"
+}
+
+### Запрос на создание пользователя
+POST http://localhost:8080/tasks
+Content-type: application/json
+
+{
+  "title": "Очень длинное название, которое сократить бы",
+  "description": "короткий"
+}
+
+### Запрос на создание пользователя
 GET http://localhost:8080/tasks
 Content-type: application/json
 

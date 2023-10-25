@@ -2,6 +2,8 @@ package com.tascks.TaskList.TaskList.web.dto;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
+import jakarta.validation.constraints.NotNull;
+import org.hibernate.validator.constraints.Length;
 
 
 //        Чтобы воспользоваться DTO-классом необходим механизм десериализации -
@@ -11,8 +13,10 @@ import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
 
 @JsonDeserialize(builder = CreateTaskDTO.Builder.class)
 public class CreateTaskDTO {
-    //    private Integer id;
+    @NotNull(message = "Необходимо ввести название задачи")
+    @Length(max = 20, message = "Сформулируйте короче")
     private String title;
+    @Length(min = 10, message = "Сформулируйте более развернуто")
     private String description;
 
     public static Builder builder() {

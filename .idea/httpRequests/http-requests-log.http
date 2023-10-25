@@ -1,0 +1,177 @@
+POST http://localhost:8080/tasks
+Content-type: application/json
+Content-Length: 136
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "Очень длинное название, которое сократить бы",
+  "description": "короткий"
+}
+
+<> 2023-10-25T192819.400.json
+
+###
+
+POST http://localhost:8080/tasks
+Content-type: application/json
+Content-Length: 136
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "Очень длинное название, которое сократить бы",
+  "description": "короткий"
+}
+
+<> 2023-10-25T192721.400.json
+
+###
+
+POST http://localhost:8080/tasks
+Content-type: application/json
+Content-Length: 90
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "description": "Достаточно длинный описывающий блок"
+}
+
+<> 2023-10-25T192634.400.json
+
+###
+
+POST http://localhost:8080/tasks
+Content-type: application/json
+Content-Length: 105
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "",
+  "description": "Достаточно длинный описывающий блок"
+}
+
+###
+
+POST http://localhost:8080/tasks
+Content-type: application/json
+Content-Length: 38
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "",
+  "description": ""
+}
+
+<> 2023-10-25T192442.400.json
+
+###
+
+GET http://localhost:8080/tasks
+Content-type: application/json
+Content-Length: 59
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "number 1",
+  "description": "description 1"
+}
+
+###
+
+POST http://localhost:8080/tasks
+Content-type: application/json
+Content-Length: 57
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "AAA",
+  "description": "короткий"
+}
+
+<> 2023-10-25T192310.400.json
+
+###
+
+POST http://localhost:8080/tasks
+Content-type: application/json
+Content-Length: 59
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "number 1",
+  "description": "description 1"
+}
+
+###
+
+POST http://localhost:8080/tasks
+Content-type: application/json
+Content-Length: 59
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "number 1",
+  "description": "description 1"
+}
+
+###
+
+POST http://localhost:8080/tasks
+Content-type: application/json
+Content-Length: 59
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "number 1",
+  "description": "description 1"
+}
+
+###
+
+POST http://localhost:8080/tasks
+Content-type: application/json
+Content-Length: 59
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "number 1",
+  "description": "description 1"
+}
+
+###
+
+POST http://localhost:8080/tasks
+Content-type: application/json
+Content-Length: 59
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "number 1",
+  "description": "description 1"
+}
+
+###
+
