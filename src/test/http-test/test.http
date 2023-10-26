@@ -1,5 +1,5 @@
 ### Запрос на создание пользователя
-POST http://localhost:8080/tasks
+POST http://localhost:8080/api/tasks
 Content-type: application/json
 
 {
@@ -8,7 +8,7 @@ Content-type: application/json
 }
 
 ### Запрос на создание пользователя
-POST http://localhost:8080/tasks
+POST http://localhost:8080/api/tasks
 Content-type: application/json
 
 {
@@ -16,7 +16,7 @@ Content-type: application/json
 }
 
 ### Запрос на создание пользователя
-POST http://localhost:8080/tasks
+POST http://localhost:8080/api/tasks
 Content-type: application/json
 
 {
@@ -25,7 +25,7 @@ Content-type: application/json
 }
 
 ### Запрос на создание пользователя
-GET http://localhost:8080/tasks
+POST http://localhost:8080/api/tasks
 Content-type: application/json
 
 {

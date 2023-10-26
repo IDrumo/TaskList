@@ -1,3 +1,35 @@
+POST http://localhost:8080/api/tasks
+Content-type: application/json
+Content-Length: 59
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "number 1",
+  "description": "description 1"
+}
+
+<> 2023-10-26T102858.404.json
+
+###
+
+POST http://localhost:8080/tasks
+Content-type: application/json
+Content-Length: 136
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "Очень длинное название, которое сократить бы",
+  "description": "короткий"
+}
+
+<> 2023-10-26T102735.404.json
+
+###
+
 POST http://localhost:8080/tasks
 Content-type: application/json
 Content-Length: 136
