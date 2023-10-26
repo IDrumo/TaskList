@@ -1,23 +1,33 @@
 package com.tascks.TaskList.Task;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
+
+@JsonDeserialize(builder = Task.Builder.class)
 public class Task {
 
     private Long id;
     private String title;
-    private String desc;
-    private Boolean status; // 0 - to do, 1 - in process, 2 - done, 3 - abandoned
+    private String description;
+    private Boolean status;
 
-    public Task() {
-
+    public static Builder builder(){
+        return new Builder();
+    }
+    public Task(Builder builder) {
+        this.id = builder.id;
+        this.title = builder.title;
+        this.description = builder.description;
+        this.status = builder.status;
     }
 
     public Task(Long id,
                 String title,
-                String desc,
+                String description,
                 Boolean status) {
         this.id = id;
         this.title = title;
-        this.desc = desc;
+        this.description = description;
         this.status = status;
     }
 
@@ -37,9 +47,9 @@ public class Task {
         this.title = title;
     }
 
-    public String getDesc(){return desc;}
+    public String getDescription(){return description;}
 
-    public void setDesc(String desc){this.desc = desc;}
+    public void setDescription(String description){this.description = description;}
 
     public Boolean getStatus(){return status;}
 
@@ -52,9 +62,42 @@ public class Task {
         return "Task{" +
                 "id=" + id +
                 ", title='" + title + "'" +
-                ", desc='" + desc + "'" +
+                ", desc='" + description + "'" +
                 ", status=" + status +
                 "}";
 
+    }
+
+
+    @JsonPOJOBuilder(withPrefix = "set")
+    public static class Builder{
+        private Long id;
+        private String title;
+        private String description;
+        private Boolean status;
+
+        public Builder setId(Long id) {
+            this.id = id;
+            return this;
+        }
+
+        public Builder setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+
+        public Builder setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+
+        public Builder setStatus(Boolean status) {
+            this.status = status;
+            return this;
+        }
+
+        public Task build(){
+            return new Task(this);
+        }
     }
 }

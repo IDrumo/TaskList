@@ -37,7 +37,7 @@ public class DATA {
         for (Task task : bank) {
             if (task.getId().equals(newTask.getId())) {
                 task.setTitle(newTask.getTitle());
-                task.setDesc(newTask.getDesc());
+                task.setDescription(newTask.getDescription());
                 task.setStatus(newTask.getStatus());
                 return;
             }
@@ -49,7 +49,7 @@ public class DATA {
         for (Task task : bank) {
             if (task.getId().equals(text.getId())) {
                 task.setTitle(text.getTitle());
-                task.setDesc(text.getDescription());
+                task.setDescription(text.getDescription());
                 return;
             }
         }

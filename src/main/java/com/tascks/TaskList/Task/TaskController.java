@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(path="api/task")
+@RequestMapping(path = "api/task")
 public class TaskController {
     private final TaskService taskService;
     private final FullDTO fullDTO;
@@ -23,38 +23,33 @@ public class TaskController {
     }
 
     @GetMapping
-    public List<Task> getTasks(){
+    public List<Task> getTasks() {
         return taskService.getTasks();
     }
 
     @PostMapping
     public void addNewTask(@RequestBody Task task){
-        fullDTO.addValue(task.getId(), task.getTitle(), task.getDesc(), task.getStatus());
+        fullDTO.addValue(task.getId(), task.getTitle(), task.getDescription(), task.getStatus());
         taskService.addTask(fullDTO);
     }
 
     @DeleteMapping(path = "{taskId}")
-    public void deleteTask(@PathVariable("taskId") Long taskId){
+    public void deleteTask(@PathVariable("taskId") Long taskId) {
         taskService.deleteTask(taskId);
     }
 
-    @PutMapping(path = "{taskId}")
-    public void updateTask(
-            @PathVariable("taskId") Long taskId,
-            @RequestParam(required = false) String title,
-            @RequestParam(required = false) String desc,
-            @RequestParam(required = false) Boolean status
-            ){
-        if (title != null && desc != null && status!=null) {
-            fullDTO.addValue(taskId, title, desc, status);
+    @PutMapping
+    public void updateTask(@RequestBody Task task) {
+        if (task.getTitle() != null && task.getDescription() != null && task.getStatus() != null) {
+            fullDTO.addValue(task.getId(), task.getTitle(), task.getDescription(), task.getStatus());
             taskService.updateFullTask(fullDTO);
         }
-        if (title != null && desc != null){
-            contentDto.addValue(taskId, title, desc);
+        if (task.getTitle() != null && task.getDescription() != null) {
+            contentDto.addValue(task.getId(), task.getTitle(), task.getDescription());
             taskService.updateTaskContent(contentDto);
         }
-        if (status != null) {
-            statusDTO.addValue(taskId,status);
+        if (task.getStatus() != null) {
+            statusDTO.addValue(task.getId(), task.getStatus());
             taskService.updateTaskStatus(statusDTO);
         }
     }

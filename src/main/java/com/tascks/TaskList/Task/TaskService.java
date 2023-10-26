@@ -13,12 +13,12 @@ public class TaskService {
 
     public TaskService(DATA data) {
         this.data = data;
-        data.addTask(new Task(
-                1L,
-                "home work",
-                "do backend",
-                true
-        ));
+//        data.addTask(new Task(
+//                1L,
+//                "home work",
+//                "do backend",
+//                true
+//        ));
     }
 
     public List<Task> getTasks(){
