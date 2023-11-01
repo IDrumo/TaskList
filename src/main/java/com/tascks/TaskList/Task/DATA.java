@@ -2,6 +2,7 @@ package com.tascks.TaskList.Task;
 
 import com.tascks.TaskList.Task.DTO.StatusDTO;
 import com.tascks.TaskList.Task.DTO.ContentDTO;
+import com.tascks.TaskList.Task.DTO.Task;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

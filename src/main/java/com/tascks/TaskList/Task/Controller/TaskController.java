@@ -1,8 +1,10 @@
-package com.tascks.TaskList.Task;
+package com.tascks.TaskList.Task.Controller;
 
 import com.tascks.TaskList.Task.DTO.FullDTO;
 import com.tascks.TaskList.Task.DTO.StatusDTO;
 import com.tascks.TaskList.Task.DTO.ContentDTO;
+import com.tascks.TaskList.Task.DTO.Task;
+import com.tascks.TaskList.Task.Service.TaskService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

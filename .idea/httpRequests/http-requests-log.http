@@ -1,3 +1,74 @@
+DELETE http://localhost:8080/api/task/2
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+DELETE http://localhost:8080/api/task/1
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+PUT http://localhost:8080/api/task
+Content-type: application/json
+Content-Length: 99
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": 1,
+  "title": "Husenberg",
+  "description": "Husenberg`s description",
+  "status": true
+}
+
+###
+
+GET http://localhost:8080/api/task
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-26T151952.200.json
+
+###
+
+POST http://localhost:8080/api/task
+Content-type: application/json
+Content-Length: 89
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": 2,
+  "title": "number 2",
+  "description": "description 2",
+  "status": false
+}
+
+###
+
+POST http://localhost:8080/api/task
+Content-type: application/json
+Content-Length: 89
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": 1,
+  "title": "number 1",
+  "description": "description 1",
+  "status": false
+}
+
+###
+
 PUT http://localhost:8080/api/task
 Content-type: application/json
 Content-Length: 99
@@ -636,92 +707,6 @@ Accept-Encoding: br,deflate,gzip,x-gzip
 }
 
 <> 2023-10-25T192442.400.json
-
-###
-
-GET http://localhost:8080/tasks
-Content-type: application/json
-Content-Length: 59
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "title": "number 1",
-  "description": "description 1"
-}
-
-###
-
-POST http://localhost:8080/tasks
-Content-type: application/json
-Content-Length: 57
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "title": "AAA",
-  "description": "короткий"
-}
-
-<> 2023-10-25T192310.400.json
-
-###
-
-POST http://localhost:8080/tasks
-Content-type: application/json
-Content-Length: 59
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "title": "number 1",
-  "description": "description 1"
-}
-
-###
-
-POST http://localhost:8080/tasks
-Content-type: application/json
-Content-Length: 59
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "title": "number 1",
-  "description": "description 1"
-}
-
-###
-
-POST http://localhost:8080/tasks
-Content-type: application/json
-Content-Length: 59
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "title": "number 1",
-  "description": "description 1"
-}
-
-###
-
-POST http://localhost:8080/tasks
-Content-type: application/json
-Content-Length: 59
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "title": "number 1",
-  "description": "description 1"
-}
 
 ###
 

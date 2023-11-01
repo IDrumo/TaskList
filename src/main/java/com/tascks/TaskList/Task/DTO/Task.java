@@ -1,8 +1,12 @@
-package com.tascks.TaskList.Task;
+package com.tascks.TaskList.Task.DTO;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 @JsonDeserialize(builder = Task.Builder.class)
 public class Task {
 
@@ -28,32 +32,6 @@ public class Task {
         this.id = id;
         this.title = title;
         this.description = description;
-        this.status = status;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getDescription(){return description;}
-
-    public void setDescription(String description){this.description = description;}
-
-    public Boolean getStatus(){return status;}
-
-    public void setStatus(Boolean status) {
         this.status = status;
     }
 

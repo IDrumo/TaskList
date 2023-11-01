@@ -1,7 +1,11 @@
 package com.tascks.TaskList.Task.DTO;
 
+import lombok.Data;
+import lombok.Getter;
+import lombok.experimental.Accessors;
 import org.springframework.stereotype.Service;
 
+@Getter
 @Service
 public class ContentDTO {
     private Long id;
@@ -19,7 +23,4 @@ public class ContentDTO {
         this.description = desc;
     }
 
-    public Long getId(){return id;}
-    public String getTitle(){return title;}
-    public String getDescription(){return description;}
 }

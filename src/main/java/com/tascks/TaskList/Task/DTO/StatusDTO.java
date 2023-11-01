@@ -1,7 +1,9 @@
 package com.tascks.TaskList.Task.DTO;
 
+import lombok.Getter;
 import org.springframework.stereotype.Service;
 
+@Getter
 @Service
 public class StatusDTO {
     private Long id;
@@ -16,11 +18,4 @@ public class StatusDTO {
         this.status = status;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public Boolean getStatus() {
-        return status;
-    }
 }

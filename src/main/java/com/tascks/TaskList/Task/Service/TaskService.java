@@ -1,8 +1,10 @@
-package com.tascks.TaskList.Task;
+package com.tascks.TaskList.Task.Service;
 
+import com.tascks.TaskList.Task.DATA;
 import com.tascks.TaskList.Task.DTO.FullDTO;
 import com.tascks.TaskList.Task.DTO.StatusDTO;
 import com.tascks.TaskList.Task.DTO.ContentDTO;
+import com.tascks.TaskList.Task.DTO.Task;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,12 +15,6 @@ public class TaskService {
 
     public TaskService(DATA data) {
         this.data = data;
-//        data.addTask(new Task(
-//                1L,
-//                "home work",
-//                "do backend",
-//                true
-//        ));
     }
 
     public List<Task> getTasks(){
