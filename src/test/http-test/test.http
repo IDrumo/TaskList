@@ -3,7 +3,7 @@ POST http://localhost:8080/api/task
 Content-type: application/json
 
 {
-  "id": 1,
+  "id": 3,
   "title": "number 1",
   "description": "description 1",
   "status": false
@@ -14,7 +14,7 @@ POST http://localhost:8080/api/task
 Content-type: application/json
 
 {
-  "id": 2,
+  "id": 4,
   "title": "number 2",
   "description": "description 2",
   "status": false
@@ -23,14 +23,14 @@ Content-type: application/json
 ### Запрос на получение пользователей
 GET http://localhost:8080/api/task
 
-### Запрос на удаление пользователя 2
-DELETE http://localhost:8080/api/task/2
+### Запрос на удаление пользователя 3
+DELETE http://localhost:8080/api/task/3
 
-### Запрос на удаление пользователя 1
-DELETE http://localhost:8080/api/task/1
+### Запрос на удаление пользователя 4
+DELETE http://localhost:8080/api/task/4
 
 ### Запрос на изменение пользователя 1
-PUT http://localhost:8080/api/task
+PUT http://localhost:8080/api/task/1
 Content-type: application/json
 
 {

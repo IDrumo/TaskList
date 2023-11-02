@@ -1,15 +1,29 @@
-package com.tascks.TaskList.Task.DTO;
+package com.tascks.TaskList.Task.Model;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+
 @Getter
 @Setter
+@Entity
+@Table
 @JsonDeserialize(builder = Task.Builder.class)
 public class Task {
 
+    @Id
+    @SequenceGenerator(
+            name = "task_sequence",
+            sequenceName = "task_sequence",
+            allocationSize = 1
+    )
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "task_sequence"
+    )
     private Long id;
     private String title;
     private String description;
@@ -18,6 +32,8 @@ public class Task {
     public static Builder builder(){
         return new Builder();
     }
+
+    public Task(){}
     public Task(Builder builder) {
         this.id = builder.id;
         this.title = builder.title;
@@ -30,6 +46,14 @@ public class Task {
                 String description,
                 Boolean status) {
         this.id = id;
+        this.title = title;
+        this.description = description;
+        this.status = status;
+    }
+
+    public Task(String title,
+                String description,
+                Boolean status) {
         this.title = title;
         this.description = description;
         this.status = status;

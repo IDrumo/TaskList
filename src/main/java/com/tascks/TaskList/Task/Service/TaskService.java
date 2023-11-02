@@ -1,39 +1,45 @@
 package com.tascks.TaskList.Task.Service;
 
-import com.tascks.TaskList.Task.DATA;
-import com.tascks.TaskList.Task.DTO.FullDTO;
-import com.tascks.TaskList.Task.DTO.StatusDTO;
-import com.tascks.TaskList.Task.DTO.ContentDTO;
-import com.tascks.TaskList.Task.DTO.Task;
+import com.tascks.TaskList.Task.DAO.TaskDAO;
+import com.tascks.TaskList.Task.DTO.*;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class TaskService {
-    private final DATA data;
+    private final TaskDAO taskDAO;
+    private final TaskDTOMapper taskDTOMapper;
 
-    public TaskService(DATA data) {
-        this.data = data;
-    }
-
-    public List<Task> getTasks(){
-        return data.getTasks();
-    }
-    public void addTask(FullDTO fullDTO){
-        data.addTask(fullDTO.toTask());
+    @Autowired
+    public TaskService(TaskDAO taskDAO) {
+        this.taskDAO = taskDAO;
+        taskDTOMapper = new TaskDTOMapper();
     }
 
-    public void deleteTask(Long taskId){
-        data.deleteTask(taskId);
+    public List<FullDTO> getTasks(){
+        return taskDAO.getAllTasks().map(taskDTOMapper)
+                .collect(Collectors.toList());
     }
-    public void updateFullTask(FullDTO fullDTO){
-        data.updateFullTask(fullDTO.toTask());
+    public FullDTO addTask(FullDTO fullDTO){
+        return taskDAO.addNewTask(fullDTO);
     }
-    public void updateTaskContent(ContentDTO contentDto){
-        data.updateTaskText(contentDto);
+
+    public void deleteTask(IdDTO idDTO){
+        taskDAO.deleteTaskById(idDTO.id());
     }
-    public void updateTaskStatus(StatusDTO statusDTO){
-        data.updateTaskStatus(statusDTO);
+    public FullDTO updateFullTask(FullDTO fullDTO){
+        return taskDAO.updateTask(fullDTO);
+    }
+    public FullDTO updateTaskContent(ContentDTO contentDto){
+        return taskDAO.updateTask(contentDto);
+    }
+    public FullDTO updateTaskStatus(StatusDTO statusDTO){
+        return taskDAO.updateTask(statusDTO);
+    }
+    public FullDTO putUpdateTask (Long taskId, RenewDTO renewDTO){
+        return taskDAO.putUpdateTask(taskId, renewDTO);
     }
 }
