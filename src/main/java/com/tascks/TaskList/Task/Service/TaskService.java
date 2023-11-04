@@ -23,6 +23,9 @@ public class TaskService {
         return taskDAO.getAllTasks().map(taskDTOMapper)
                 .collect(Collectors.toList());
     }
+//    public FullDTO getTaskById(Long taskId){
+//        return taskDAO.getAllTasks().map(taskDTOMapper);
+//    }
     public FullDTO addTask(FullDTO fullDTO){
         return taskDAO.addNewTask(fullDTO);
     }
